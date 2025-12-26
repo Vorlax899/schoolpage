@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(to right, #1d2671, #c33764);
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+.school-name {
+    font-size: 40px;
+}
+
+.tagline {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(239, 233, 113);
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 420px;
+}
+
+.hero .slider-track {
+    display: flex;
+    width: 200%;
+    animation: slide 12s linear infinite;
+}
+
+.hero .slider-track img {
+    width: 50%;
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(95%) contrast(115%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+}
+
+.section {
+    padding: 50px 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUpHeading 1s forwards;
+}
+
+
+.section h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: orange;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.alt {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.dept-list {
+    list-style: none;
+    padding: 0;
+}
+
+.dept-list li {
+    padding: 8px;
+}
+
+.section p {
+    opacity: 1;
+    transform: none;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    50% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+}
+
+@keyframes fadeUpHeading {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
